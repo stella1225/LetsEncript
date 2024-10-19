@@ -1,0 +1,16 @@
+このような手順にしたがって暗号化されるものはbase64と呼ばれています．
+大体どのような言語でもライブラリでサポートされているので，それを使います．
+
+c++ 
+https://sanichi999.hateblo.jp/entry/2014/12/06/154356
+
+python3
+
+import base64
+Q=int(input())
+for i in range(Q):
+  text=input()
+  print(base64.b64encode(text.encode()).decode())
+
+なお，今回は大文字または小文字に限られているので，
+デコードしたあと/または+が含まれることはないです．
